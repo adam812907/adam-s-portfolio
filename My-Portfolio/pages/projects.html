@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Creations - Explore Adam Maskhouni's portfolio of cybersecurity tools, game development projects, and innovative software solutions">
+    <title>Digital Creations | Adam Maskhouni - Elite Developer Portfolio</title>
+    <link rel="stylesheet" href="../css/main.css">
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcybergene2987back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+  </head>
+<body class="bg-background text-text-primary overflow-x-hidden">
+    
+    <!-- Animated Background Particles -->
+    <div id="particles-container" class="fixed inset-0 z-0 pointer-events-none">
+        <canvas id="particles-canvas" class="w-full h-full"></canvas>
+    </div>
+
+    <!-- Floating Navigation Menu -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated mt-4 px-6 py-4 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L37 12V28L20 38L3 28V12L20 2Z" stroke="url(#logo-gradient)" stroke-width="2" fill="none" class="group-hover:fill-accent/10 transition-all duration-300"/>
+                            <text x="20" y="26" font-family="Orbitron" font-weight="900" font-size="16" fill="#00D4FF" text-anchor="middle">AM</text>
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="3" y1="2" x2="37" y2="38">
+                                    <stop offset="0%" stop-color="#00D4FF"/>
+                                    <stop offset="100%" stop-color="#2D1B69"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="absolute inset-0 bg-accent/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <span class="font-headline text-xl font-bold gradient-text hidden sm:block">ADAM MASKHOUNI</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="homepage.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Command Center</a>
+                    <a href="about.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Origin Story</a>
+                    <a href="skills.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Arsenal</a>
+                    <a href="projects.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-accent border-b-2 border-accent transition-all duration-300">Digital Creations</a>
+                    <a href="blog.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Intelligence Network</a>
+                    <a href="contact.html" class="btn-primary ml-4">Secure Channel</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-accent/10 transition-all duration-300">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2 mx-4">
+            <div class="glass-card-elevated p-4 space-y-2">
+                <a href="homepage.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Command Center</a>
+                <a href="about.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Origin Story</a>
+                <a href="skills.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Arsenal</a>
+                <a href="projects.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-accent bg-accent/10 border-l-4 border-accent">Digital Creations</a>
+                <a href="blog.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Intelligence Network</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-center bg-accent text-primary hover:bg-accent-light transition-all duration-300">Secure Channel</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 cyber-grid">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-background z-0"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center space-x-2 glass-card px-4 py-2 mb-8 animate-slideDown">
+                <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span class="font-code text-sm text-success">50+ PROJECTS DEPLOYED • INNOVATION IN PROGRESS</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-headline font-black text-5xl md:text-7xl lg:text-8xl mb-6 animate-slideUp">
+                <span class="block text-text-primary">DIGITAL</span>
+                <span class="block gradient-text mt-2">CREATIONS</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <div class="mb-8 animate-slideUp" style="animation-delay: 0.2s;">
+                <p class="font-body text-xl md:text-2xl text-text-secondary mb-2">
+                    Where Security Meets Innovation
+                </p>
+                <p class="font-body text-lg md:text-xl text-text-secondary">
+                    Explore cutting-edge projects spanning cybersecurity, game development, and AI innovation
+                </p>
+            </div>
+
+            <!-- Project Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12 animate-slideUp" style="animation-delay: 0.4s;">
+                <div class="glass-card p-6 hover-lift">
+                    <div class="text-3xl md:text-4xl font-headline font-bold gradient-text mb-2">50+</div>
+                    <div class="text-sm text-text-secondary font-body">Projects Built</div>
+                </div>
+                <div class="glass-card p-6 hover-lift">
+                    <div class="text-3xl md:text-4xl font-headline font-bold gradient-text mb-2">15</div>
+                    <div class="text-sm text-text-secondary font-body">Live Deployments</div>
+                </div>
+                <div class="glass-card p-6 hover-lift">
+                    <div class="text-3xl md:text-4xl font-headline font-bold gradient-text mb-2">8</div>
+                    <div class="text-sm text-text-secondary font-body">Tech Stacks</div>
+                </div>
+                <div class="glass-card p-6 hover-lift">
+                    <div class="text-3xl md:text-4xl font-headline font-bold gradient-text mb-2">100%</div>
+                    <div class="text-sm text-text-secondary font-body">Success Rate</div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filters Section -->
+    <section id="project-filters" class="relative py-16">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary/30 to-background"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated p-6 mb-8 scroll-reveal">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button class="filter-btn active" data-filter="all">
+                            <span class="flex items-center space-x-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                </svg>
+                                <span>All Projects</span>
+                            </span>
+                        </button>
+                        <button class="filter-btn" data-filter="cybersecurity">
+                            <span class="flex items-center space-x-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                                <span>Cybersecurity</span>
+                            </span>
+                        </button>
+                        <button class="filter-btn" data-filter="gamedev">
+                            <span class="flex items-center space-x-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                </svg>
+                                <span>Game Dev</span>
+                            </span>
+                        </button>
+                        <button class="filter-btn" data-filter="ai">
+                            <span class="flex items-center space-x-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                                <span>AI/ML</span>
+                            </span>
+                        </button>
+                        <button class="filter-btn" data-filter="fullstack">
+                            <span class="flex items-center space-x-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                                <span>Full Stack</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Search and Reset -->
+                    <div class="flex items-center space-x-3">
+                        <div class="relative">
+                            <input type="text" id="project-search" placeholder="Search projects..." class="bg-surface border border-border rounded-lg px-4 py-2 pl-10 text-text-primary placeholder-text-secondary focus:border-accent focus:outline-none transition-colors duration-300">
+                            <svg class="w-5 h-5 text-text-secondary absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                        <button id="reset-filters" class="btn-ghost">
+                            <span class="flex items-center space-x-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                </svg>
+                                <span>Reset</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary/30 to-background"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">FEATURED PROJECTS</span>
+                </h2>
+                <p class="font-body text-lg text-text-secondary max-w-2xl mx-auto">
+                    Flagship innovations showcasing the intersection of security, creativity, and cutting-edge technology
+                </p>
+            </div>
+
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: CyberGuard Pro -->
+                <div class="project-card glass-card overflow-hidden hover-lift group scroll-reveal" data-category="cybersecurity" data-complexity="advanced">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_16c86234b-1766509365163.png" alt="CyberGuard Pro security dashboard displaying real-time threat monitoring with advanced analytics and alert systems" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-success">LIVE</span>
+                        </div>
+                        <div class="absolute top-4 right-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-warning">ADVANCED</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Cybersecurity</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">AI-Powered</span>
+                            <span class="px-3 py-1 bg-success/20 text-success text-xs font-code rounded-full">Python</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2">CyberGuard Pro</h3>
+                        <p class="font-body text-sm text-text-secondary mb-4">
+                            Enterprise-grade threat detection system with ML-powered anomaly detection, real-time monitoring, and automated incident response capabilities.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4 text-xs text-text-secondary">
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <span>2.5k views</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                    </svg>
+                                    <span>47 stars</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <a href="javascript:void(0)" class="btn-primary flex-1 text-center">
+                                <span class="flex items-center justify-center space-x-2">
+                                    <span>Live Demo</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2M7 7l10 10M17 7v4m0 0h-4"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-ghost">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Neon Nexus -->
+                <div class="project-card glass-card overflow-hidden hover-lift group scroll-reveal" data-category="gamedev" data-complexity="advanced" style="animation-delay: 0.1s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1683496865103-263bd91872b6" alt="Neon Nexus cyberpunk game environment featuring futuristic cityscape with neon lighting and advanced graphics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-warning">IN DEV</span>
+                        </div>
+                        <div class="absolute top-4 right-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-warning">ADVANCED</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Game Dev</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Unity</span>
+                            <span class="px-3 py-1 bg-success/20 text-success text-xs font-code rounded-full">C#</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2">Neon Nexus</h3>
+                        <p class="font-body text-sm text-text-secondary mb-4">
+                            Cyberpunk action-adventure game with procedural generation, dynamic combat systems, and immersive storytelling in a neon-lit dystopian world.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4 text-xs text-text-secondary">
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <span>1.8k views</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                    </svg>
+                                    <span>32 stars</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <a href="javascript:void(0)" class="btn-primary flex-1 text-center">
+                                <span class="flex items-center justify-center space-x-2">
+                                    <span>Preview</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-ghost">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: AI Security Analyzer -->
+                <div class="project-card glass-card overflow-hidden hover-lift group scroll-reveal" data-category="ai cybersecurity" data-complexity="intermediate" style="animation-delay: 0.2s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1dabf9a67-1766880701589.png" alt="AI Security Analyzer interface showing machine learning models analyzing network traffic patterns and security threats" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-success">LIVE</span>
+                        </div>
+                        <div class="absolute top-4 right-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-accent">INTERMEDIATE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">AI/ML</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Security</span>
+                            <span class="px-3 py-1 bg-success/20 text-success text-xs font-code rounded-full">Python</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2">AI Security Analyzer</h3>
+                        <p class="font-body text-sm text-text-secondary mb-4">
+                            Machine learning-powered security analysis tool that identifies vulnerabilities and predicts potential attack vectors using advanced neural networks.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4 text-xs text-text-secondary">
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <span>3.2k views</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                    </svg>
+                                    <span>68 stars</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <a href="javascript:void(0)" class="btn-primary flex-1 text-center">
+                                <span class="flex items-center justify-center space-x-2">
+                                    <span>Try Demo</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-ghost">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: DevSecOps Pipeline -->
+                <div class="project-card glass-card overflow-hidden hover-lift group scroll-reveal" data-category="fullstack cybersecurity" data-complexity="advanced" style="animation-delay: 0.3s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_199fd7c54-1766880701358.png" alt="DevSecOps pipeline dashboard showing automated CI/CD workflow with integrated security scanning and deployment stages" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-success">LIVE</span>
+                        </div>
+                        <div class="absolute top-4 right-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-warning">ADVANCED</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">DevOps</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Automation</span>
+                            <span class="px-3 py-1 bg-success/20 text-success text-xs font-code rounded-full">Docker</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2">DevSecOps Pipeline</h3>
+                        <p class="font-body text-sm text-text-secondary mb-4">
+                            Automated CI/CD pipeline with integrated security scanning, compliance checks, and deployment automation for enterprise-grade applications.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4 text-xs text-text-secondary">
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <span>4.1k views</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                    </svg>
+                                    <span>89 stars</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <a href="javascript:void(0)" class="btn-primary flex-1 text-center">
+                                <span class="flex items-center justify-center space-x-2">
+                                    <span>View Pipeline</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-ghost">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Quantum Encryption Tool -->
+                <div class="project-card glass-card overflow-hidden hover-lift group scroll-reveal" data-category="cybersecurity" data-complexity="beginner" style="animation-delay: 0.4s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1d8d3fef7-1766880700442.png" alt="Quantum encryption interface displaying advanced cryptographic algorithms and secure communication protocols" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-success">LIVE</span>
+                        </div>
+                        <div class="absolute top-4 right-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-success">BEGINNER</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Cryptography</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Security</span>
+                            <span class="px-3 py-1 bg-success/20 text-success text-xs font-code rounded-full">Java</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2">Quantum Encryption Tool</h3>
+                        <p class="font-body text-sm text-text-secondary mb-4">
+                            Educational cryptography tool demonstrating quantum-resistant encryption algorithms and secure communication protocols for learning purposes.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4 text-xs text-text-secondary">
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <span>1.2k views</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                    </svg>
+                                    <span>24 stars</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <a href="javascript:void(0)" class="btn-primary flex-1 text-center">
+                                <span class="flex items-center justify-center space-x-2">
+                                    <span>Try Tool</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-ghost">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Smart Home Security -->
+                <div class="project-card glass-card overflow-hidden hover-lift group scroll-reveal" data-category="fullstack" data-complexity="intermediate" style="animation-delay: 0.5s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_173ed3368-1764661380993.png" alt="Smart home security system dashboard showing IoT device monitoring and automated security controls" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-success">LIVE</span>
+                        </div>
+                        <div class="absolute top-4 right-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-accent">INTERMEDIATE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">IoT</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">React</span>
+                            <span class="px-3 py-1 bg-success/20 text-success text-xs font-code rounded-full">Node.js</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2">Smart Home Security</h3>
+                        <p class="font-body text-sm text-text-secondary mb-4">
+                            Comprehensive IoT security platform for smart homes with real-time monitoring, automated responses, and mobile app integration.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4 text-xs text-text-secondary">
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <span>2.7k views</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                    </svg>
+                                    <span>56 stars</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <a href="javascript:void(0)" class="btn-primary flex-1 text-center">
+                                <span class="flex items-center justify-center space-x-2">
+                                    <span>Live Demo</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-ghost">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12 scroll-reveal">
+                <button id="load-more-btn" class="btn-secondary">
+                    <span class="flex items-center justify-center space-x-2">
+                        <span>Load More Projects</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration CTA Section -->
+    <section id="collaboration-cta" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary to-background"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated p-8 text-center scroll-reveal">
+                <div class="mb-8">
+                    <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                        <span class="gradient-text">READY TO COLLABORATE?</span>
+                    </h2>
+                    <p class="font-body text-lg text-text-secondary max-w-2xl mx-auto">
+                        Let's build something extraordinary together. From cybersecurity solutions to immersive gaming experiences, 
+                        I'm ready to turn your vision into reality.
+                    </p>
+                </div>
+
+                <!-- Collaboration Options -->
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="glass-card p-6 hover-lift">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
+                            <svg class="w-8 h-8 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-cta text-lg font-bold text-text-primary mb-2">Project Development</h3>
+                        <p class="text-sm text-text-secondary">Full-stack development, security audits, and custom solutions</p>
+                    </div>
+
+                    <div class="glass-card p-6 hover-lift">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
+                            <svg class="w-8 h-8 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-cta text-lg font-bold text-text-primary mb-2">Technical Mentorship</h3>
+                        <p class="text-sm text-text-secondary">Code reviews, architecture guidance, and best practices</p>
+                    </div>
+
+                    <div class="glass-card p-6 hover-lift">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
+                            <svg class="w-8 h-8 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 12h6m-6 4h6"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-cta text-lg font-bold text-text-primary mb-2">Speaking & Workshops</h3>
+                        <p class="text-sm text-text-secondary">Technical presentations, workshops, and conference talks</p>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="contact.html" class="btn-primary w-full sm:w-auto">
+                        <span class="flex items-center justify-center space-x-2">
+                            <span>Start a Project</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="javascript:void(0)" class="btn-ghost w-full sm:w-auto">
+                        <span class="flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <span>View GitHub</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L37 12V28L20 38L3 28V12L20 2Z" stroke="url(#footer-logo-gradient)" stroke-width="2" fill="none"/>
+                            <text x="20" y="26" font-family="Orbitron" font-weight="900" font-size="16" fill="#00D4FF" text-anchor="middle">AM</text>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="3" y1="2" x2="37" y2="38">
+                                    <stop offset="0%" stop-color="#00D4FF"/>
+                                    <stop offset="100%" stop-color="#2D1B69"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-headline text-xl font-bold gradient-text">ADAM MASKHOUNI</span>
+                    </div>
+                    <p class="text-text-secondary text-sm mb-4 max-w-md">
+                        Building tomorrow's digital infrastructure today. Where security meets creativity in the realm of code.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-cta text-lg font-bold text-text-primary mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Command Center</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Origin Story</a></li>
+                        <li><a href="skills.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Arsenal</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Digital Creations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-cta text-lg font-bold text-text-primary mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Intelligence Network</a></li>
+                        <li><a href="contact.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Secure Channel</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">GitHub</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-border text-center">
+                <p class="text-text-secondary text-sm">
+                    © 2025 Adam Maskhouni. All Rights Reserved. | Built with <span class="text-accent">♥</span> and <span class="terminal-text">code</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Project Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        const searchInput = document.getElementById('project-search');
+        const resetBtn = document.getElementById('reset-filters');
+
+        // Filter button styles
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-accent', 'text-primary');
+                    b.classList.add('bg-surface', 'text-text-secondary', 'hover:bg-accent/10', 'hover:text-accent');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-accent', 'text-primary');
+                btn.classList.remove('bg-surface', 'text-text-secondary', 'hover:bg-accent/10', 'hover:text-accent');
+                
+                filterProjects();
+            });
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', filterProjects);
+
+        // Reset filters
+        resetBtn.addEventListener('click', () => {
+            // Reset active filter
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active', 'bg-accent', 'text-primary');
+                btn.classList.add('bg-surface', 'text-text-secondary', 'hover:bg-accent/10', 'hover:text-accent');
+            });
+            filterBtns[0].classList.add('active', 'bg-accent', 'text-primary');
+            filterBtns[0].classList.remove('bg-surface', 'text-text-secondary', 'hover:bg-accent/10', 'hover:text-accent');
+            
+            // Clear search
+            searchInput.value = '';
+            
+            // Show all projects
+            projectCards.forEach(card => {
+                card.style.display = 'block';
+            });
+        });
+
+        function filterProjects() {
+            const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+            const searchTerm = searchInput.value.toLowerCase();
+
+            projectCards.forEach(card => {
+                const categories = card.dataset.category.split(' ');
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                const matchesFilter = activeFilter === 'all' || categories.includes(activeFilter);
+                const matchesSearch = searchTerm === '' || 
+                    title.includes(searchTerm) || 
+                    description.includes(searchTerm) ||
+                    categories.some(cat => cat.includes(searchTerm));
+                
+                if (matchesFilter && matchesSearch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize filter button styles
+        document.addEventListener('DOMContentLoaded', () => {
+            filterBtns.forEach(btn => {
+                if (btn.classList.contains('active')) {
+                    btn.classList.add('bg-accent', 'text-primary');
+                } else {
+                    btn.classList.add('bg-surface', 'text-text-secondary', 'hover:bg-accent/10', 'hover:text-accent');
+                }
+                btn.classList.add('px-4', 'py-2', 'rounded-lg', 'font-cta', 'font-semibold', 'transition-all', 'duration-300');
+            });
+        });
+
+        // Load More Projects (placeholder functionality)
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        loadMoreBtn.addEventListener('click', () => {
+            // Simulate loading more projects
+            loadMoreBtn.innerHTML = `
+                <span class="flex items-center justify-center space-x-2">
+                    <svg class="animate-spin w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                    <span>Loading...</span>
+                </span>
+            `;
+            
+            setTimeout(() => {
+                loadMoreBtn.innerHTML = `
+                    <span class="flex items-center justify-center space-x-2">
+                        <span>All Projects Loaded</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </span>
+                `;
+                loadMoreBtn.disabled = true;
+                loadMoreBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }, 2000);
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('backdrop-blur-xl', 'bg-primary/80');
+            } else {
+                nav.classList.remove('backdrop-blur-xl', 'bg-primary/80');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Particle System
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 80;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5 + 0.2;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+
+            draw() {
+                ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

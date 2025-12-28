@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intelligence Network - Technical insights, industry predictions, and development tutorials from Adam Maskhouni">
+    <title>Intelligence Network | Adam Maskhouni - Tech Insights & Tutorials</title>
+    <link rel="stylesheet" href="../css/main.css">
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcybergene2987back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+  </head>
+<body class="bg-background text-text-primary overflow-x-hidden">
+    
+    <!-- Animated Background Particles -->
+    <div id="particles-container" class="fixed inset-0 z-0 pointer-events-none">
+        <canvas id="particles-canvas" class="w-full h-full"></canvas>
+    </div>
+
+    <!-- Floating Navigation Menu -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated mt-4 px-6 py-4 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L37 12V28L20 38L3 28V12L20 2Z" stroke="url(#logo-gradient)" stroke-width="2" fill="none" class="group-hover:fill-accent/10 transition-all duration-300"/>
+                            <text x="20" y="26" font-family="Orbitron" font-weight="900" font-size="16" fill="#00D4FF" text-anchor="middle">AM</text>
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="3" y1="2" x2="37" y2="38">
+                                    <stop offset="0%" stop-color="#00D4FF"/>
+                                    <stop offset="100%" stop-color="#2D1B69"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="absolute inset-0 bg-accent/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <span class="font-headline text-xl font-bold gradient-text hidden sm:block">ADAM MASKHOUNI</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="homepage.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Command Center</a>
+                    <a href="about.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Origin Story</a>
+                    <a href="skills.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Arsenal</a>
+                    <a href="projects.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Digital Creations</a>
+                    <a href="blog.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-accent border-b-2 border-accent transition-all duration-300">Intelligence Network</a>
+                    <a href="contact.html" class="btn-primary ml-4">Secure Channel</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-accent/10 transition-all duration-300">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2 mx-4">
+            <div class="glass-card-elevated p-4 space-y-2">
+                <a href="homepage.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Command Center</a>
+                <a href="about.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Origin Story</a>
+                <a href="skills.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Arsenal</a>
+                <a href="projects.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Digital Creations</a>
+                <a href="blog.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-accent bg-accent/10 border-l-4 border-accent">Intelligence Network</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-center bg-accent text-primary hover:bg-accent-light transition-all duration-300">Secure Channel</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-[60vh] flex items-center justify-center pt-32 pb-16 cyber-grid">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-background z-0"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center space-x-2 glass-card px-4 py-2 mb-8 animate-slideDown">
+                <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span class="font-code text-sm text-success">INTELLIGENCE NETWORK ACTIVE</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-headline font-black text-5xl md:text-6xl lg:text-7xl mb-6 animate-slideUp">
+                <span class="block gradient-text">INTELLIGENCE NETWORK</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="font-body text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto animate-slideUp" style="animation-delay: 0.2s;">
+                Technical insights, industry predictions, and development tutorials from the digital frontier
+            </p>
+
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto animate-slideUp" style="animation-delay: 0.4s;">
+                <div class="glass-card p-2 flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-accent ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search articles, tutorials, insights..." class="flex-1 bg-transparent border-none outline-none text-text-primary placeholder-text-muted font-body px-2 py-2">
+                    <button class="btn-primary px-6 py-2">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section id="filters" class="relative py-8 border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-lg font-cta font-semibold text-sm bg-accent text-primary transition-all duration-300" data-category="all">
+                        All Articles
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg font-cta font-semibold text-sm text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300" data-category="cybersecurity">
+                        Cybersecurity
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg font-cta font-semibold text-sm text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300" data-category="game-dev">
+                        Game Development
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg font-cta font-semibold text-sm text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300" data-category="ai-ml">
+                        AI/ML
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg font-cta font-semibold text-sm text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300" data-category="tutorials">
+                        Tutorials
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg font-cta font-semibold text-sm text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300" data-category="industry">
+                        Industry Insights
+                    </button>
+                </div>
+
+                <!-- Sort & View Options -->
+                <div class="flex items-center gap-4">
+                    <select id="sort-select" class="glass-card px-4 py-2 rounded-lg font-cta font-semibold text-sm text-text-primary bg-surface border border-border outline-none cursor-pointer">
+                        <option value="latest">Latest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                    <button id="reset-filters" class="p-2 rounded-lg hover:bg-accent/10 transition-all duration-300" title="Reset Filters">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section id="featured-article" class="relative py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated overflow-hidden hover-lift group scroll-reveal">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <!-- Image -->
+                    <div class="relative h-64 md:h-auto overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_19f4a6bc5-1766880701246.png" alt="Featured article showing advanced cybersecurity threat detection dashboard with real-time monitoring" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 glass-card px-3 py-1">
+                            <span class="text-xs font-code text-warning">FEATURED</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Cybersecurity</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Advanced</span>
+                            <span class="text-text-muted text-sm font-code">• 12 min read</span>
+                        </div>
+                        
+                        <h2 class="font-headline text-3xl md:text-4xl font-bold text-text-primary mb-4">
+                            The Future of AI-Powered Threat Detection: A Deep Dive
+                        </h2>
+                        
+                        <p class="font-body text-text-secondary mb-6 leading-relaxed">
+                            Exploring how machine learning algorithms are revolutionizing cybersecurity threat detection, from anomaly identification to predictive defense mechanisms. This comprehensive guide covers implementation strategies, real-world case studies, and future trends in AI-driven security.
+                        </p>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
+                                    <span class="font-headline text-sm font-bold text-primary">AM</span>
+                                </div>
+                                <div>
+                                    <p class="font-cta font-semibold text-text-primary text-sm">Adam Maskhouni</p>
+                                    <p class="text-text-muted text-xs font-code">December 25, 2025</p>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="btn-primary">
+                                <span class="flex items-center space-x-2">
+                                    <span>Read Article</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section id="articles-grid" class="relative py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-container">
+                
+                <!-- Article Card 1 -->
+                <article class="glass-card overflow-hidden hover-lift group scroll-reveal article-card" data-category="game-dev" data-date="2025-12-22">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1998f4a66-1766880699049.png" alt="Unity game engine interface showing procedural generation system for dynamic level creation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Game Dev</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Intermediate</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2 line-clamp-2">
+                            Building Procedural Generation Systems in Unity
+                        </h3>
+                        <p class="font-body text-sm text-text-secondary mb-4 line-clamp-3">
+                            A comprehensive guide to implementing procedural generation algorithms for creating dynamic, infinite game worlds with optimized performance.
+                        </p>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-text-muted font-code">8 min read</span>
+                            <span class="text-text-muted font-code">Dec 22, 2025</span>
+                        </div>
+                        <a href="javascript:void(0)" class="inline-flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300 mt-4">
+                            <span class="font-cta font-semibold">Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="glass-card overflow-hidden hover-lift group scroll-reveal article-card" data-category="tutorials" data-date="2025-12-20" style="animation-delay: 0.1s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611926069989-38b9925b1c1e" alt="Python code editor displaying ethical hacking script for network vulnerability scanning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Tutorial</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Beginner</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2 line-clamp-2">
+                            Python for Ethical Hackers: Getting Started
+                        </h3>
+                        <p class="font-body text-sm text-text-secondary mb-4 line-clamp-3">
+                            Learn the fundamentals of Python programming specifically tailored for cybersecurity applications and ethical hacking practices.
+                        </p>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-text-muted font-code">15 min read</span>
+                            <span class="text-text-muted font-code">Dec 20, 2025</span>
+                        </div>
+                        <a href="javascript:void(0)" class="inline-flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300 mt-4">
+                            <span class="font-cta font-semibold">Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="glass-card overflow-hidden hover-lift group scroll-reveal article-card" data-category="industry" data-date="2025-12-18" style="animation-delay: 0.2s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1d007642e-1764655545206.png" alt="Futuristic technology visualization showing AI and blockchain integration concepts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Industry</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Analysis</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2 line-clamp-2">
+                            2026 Tech Predictions: What's Next for Cybersecurity
+                        </h3>
+                        <p class="font-body text-sm text-text-secondary mb-4 line-clamp-3">
+                            Industry analysis and predictions for emerging cybersecurity trends, from quantum encryption to AI-driven defense systems.
+                        </p>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-text-muted font-code">10 min read</span>
+                            <span class="text-text-muted font-code">Dec 18, 2025</span>
+                        </div>
+                        <a href="javascript:void(0)" class="inline-flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300 mt-4">
+                            <span class="font-cta font-semibold">Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="glass-card overflow-hidden hover-lift group scroll-reveal article-card" data-category="ai-ml" data-date="2025-12-15" style="animation-delay: 0.3s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1776ad126-1764646512120.png" alt="Neural network visualization showing machine learning model architecture and data flow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">AI/ML</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Advanced</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2 line-clamp-2">
+                            Training Neural Networks for Game AI Behavior
+                        </h3>
+                        <p class="font-body text-sm text-text-secondary mb-4 line-clamp-3">
+                            Deep dive into implementing reinforcement learning algorithms for creating intelligent, adaptive NPC behavior in games.
+                        </p>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-text-muted font-code">20 min read</span>
+                            <span class="text-text-muted font-code">Dec 15, 2025</span>
+                        </div>
+                        <a href="javascript:void(0)" class="inline-flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300 mt-4">
+                            <span class="font-cta font-semibold">Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 5 -->
+                <article class="glass-card overflow-hidden hover-lift group scroll-reveal article-card" data-category="cybersecurity" data-date="2025-12-12" style="animation-delay: 0.4s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1da95ec5c-1764669652380.png" alt="Digital security concept showing encrypted data transmission and firewall protection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Cybersecurity</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Intermediate</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2 line-clamp-2">
+                            Penetration Testing Methodologies Explained
+                        </h3>
+                        <p class="font-body text-sm text-text-secondary mb-4 line-clamp-3">
+                            Comprehensive overview of penetration testing frameworks, tools, and best practices for ethical security assessments.
+                        </p>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-text-muted font-code">18 min read</span>
+                            <span class="text-text-muted font-code">Dec 12, 2025</span>
+                        </div>
+                        <a href="javascript:void(0)" class="inline-flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300 mt-4">
+                            <span class="font-cta font-semibold">Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 6 -->
+                <article class="glass-card overflow-hidden hover-lift group scroll-reveal article-card" data-category="tutorials" data-date="2025-12-10" style="animation-delay: 0.5s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1278e5e50-1764670617656.png" alt="Developer workspace showing multiple monitors with code and development tools" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-code rounded-full">Tutorial</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary-light text-xs font-code rounded-full">Intermediate</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-text-primary mb-2 line-clamp-2">
+                            Building Secure REST APIs with Node.js
+                        </h3>
+                        <p class="font-body text-sm text-text-secondary mb-4 line-clamp-3">
+                            Step-by-step guide to creating production-ready REST APIs with authentication, authorization, and security best practices.
+                        </p>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-text-muted font-code">25 min read</span>
+                            <span class="text-text-muted font-code">Dec 10, 2025</span>
+                        </div>
+                        <a href="javascript:void(0)" class="inline-flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300 mt-4">
+                            <span class="font-cta font-semibold">Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12 scroll-reveal">
+                <button class="btn-secondary">
+                    <span class="flex items-center justify-center space-x-2">
+                        <span>Load More Articles</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section id="newsletter" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary to-background"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated p-8 md:p-12 text-center scroll-reveal">
+                <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                
+                <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">JOIN THE INTELLIGENCE NETWORK</span>
+                </h2>
+                
+                <p class="font-body text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
+                    Get exclusive insights, tutorials, and industry predictions delivered directly to your inbox. No spam, just pure technical knowledge.
+                </p>
+
+                <form class="max-w-xl mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="your.email@domain.com" class="flex-1 glass-card px-6 py-4 rounded-lg font-body text-text-primary placeholder-text-muted outline-none focus:border-accent transition-all duration-300" required>
+                        <button type="submit" class="btn-primary whitespace-nowrap">
+                            <span class="flex items-center justify-center space-x-2">
+                                <span>Subscribe</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <p class="text-text-muted text-sm mt-4 font-code">
+                        Join 2,500+ developers receiving weekly insights
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSS & Social Sharing -->
+    <section id="social-sharing" class="relative py-16 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <!-- RSS Feed -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-lg bg-warning/20 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-cta text-lg font-bold text-text-primary">RSS Feed</h3>
+                        <a href="javascript:void(0)" class="text-accent hover:text-accent-light text-sm transition-colors duration-300">Subscribe to updates</a>
+                    </div>
+                </div>
+
+                <!-- Social Share -->
+                <div class="flex items-center space-x-4">
+                    <span class="font-cta font-semibold text-text-secondary">Share:</span>
+                    <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                        <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                        <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                        <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L37 12V28L20 38L3 28V12L20 2Z" stroke="url(#footer-logo-gradient)" stroke-width="2" fill="none"/>
+                            <text x="20" y="26" font-family="Orbitron" font-weight="900" font-size="16" fill="#00D4FF" text-anchor="middle">AM</text>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="3" y1="2" x2="37" y2="38">
+                                    <stop offset="0%" stop-color="#00D4FF"/>
+                                    <stop offset="100%" stop-color="#2D1B69"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-headline text-xl font-bold gradient-text">ADAM MASKHOUNI</span>
+                    </div>
+                    <p class="text-text-secondary text-sm mb-4 max-w-md">
+                        Building tomorrow's digital infrastructure today. Where security meets creativity in the realm of code.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-cta text-lg font-bold text-text-primary mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Command Center</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Origin Story</a></li>
+                        <li><a href="skills.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Arsenal</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Digital Creations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-cta text-lg font-bold text-text-primary mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Intelligence Network</a></li>
+                        <li><a href="contact.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Secure Channel</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">GitHub</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-border text-center">
+                <p class="text-text-secondary text-sm">
+                    © 2025 Adam Maskhouni. All Rights Reserved. | Built with <span class="text-accent">♥</span> and <span class="terminal-text">code</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('backdrop-blur-xl', 'bg-primary/80');
+            } else {
+                nav.classList.remove('backdrop-blur-xl', 'bg-primary/80');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articleCards = document.querySelectorAll('.article-card');
+        const resetBtn = document.getElementById('reset-filters');
+        const sortSelect = document.getElementById('sort-select');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-accent', 'text-primary');
+                    b.classList.add('text-text-secondary');
+                });
+                btn.classList.add('active', 'bg-accent', 'text-primary');
+                btn.classList.remove('text-text-secondary');
+
+                // Filter articles
+                const category = btn.dataset.category;
+                articleCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Reset Filters
+        resetBtn.addEventListener('click', () => {
+            filterBtns[0].click();
+            sortSelect.value = 'latest';
+        });
+
+        // Sort Functionality
+        sortSelect.addEventListener('change', (e) => {
+            const sortValue = e.target.value;
+            const articlesContainer = document.getElementById('articles-container');
+            const articles = Array.from(articleCards);
+
+            articles.sort((a, b) => {
+                const dateA = new Date(a.dataset.date);
+                const dateB = new Date(b.dataset.date);
+
+                if (sortValue === 'latest') {
+                    return dateB - dateA;
+                } else if (sortValue === 'oldest') {
+                    return dateA - dateB;
+                } else if (sortValue === 'popular') {
+                    // Mock popularity sorting (in real app, would use actual metrics)
+                    return Math.random() - 0.5;
+                }
+            });
+
+            articles.forEach(article => {
+                articlesContainer.appendChild(article);
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            articleCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Particle System
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 100;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5 + 0.2;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+
+            draw() {
+                ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Newsletter Form Submission
+        const newsletterForm = document.querySelector('#newsletter form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            
+            // Mock submission (in real app, would send to backend)
+            alert(`Thank you for subscribing! Confirmation sent to ${email}`);
+            e.target.reset();
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

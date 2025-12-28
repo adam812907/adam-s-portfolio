@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adam Maskhouni's Origin Story - Journey from curious teenager to digital prodigy, mastering ethical hacking and game development">
+    <title>Origin Story | Adam Maskhouni - The Digital Prodigy Manifesto</title>
+    <link rel="stylesheet" href="../css/main.css">
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcybergene2987back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+  </head>
+<body class="bg-background text-text-primary overflow-x-hidden">
+    
+    <!-- Animated Background Particles -->
+    <div id="particles-container" class="fixed inset-0 z-0 pointer-events-none">
+        <canvas id="particles-canvas" class="w-full h-full"></canvas>
+    </div>
+
+    <!-- Floating Navigation Menu -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated mt-4 px-6 py-4 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L37 12V28L20 38L3 28V12L20 2Z" stroke="url(#logo-gradient)" stroke-width="2" fill="none" class="group-hover:fill-accent/10 transition-all duration-300"/>
+                            <text x="20" y="26" font-family="Orbitron" font-weight="900" font-size="16" fill="#00D4FF" text-anchor="middle">AM</text>
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="3" y1="2" x2="37" y2="38">
+                                    <stop offset="0%" stop-color="#00D4FF"/>
+                                    <stop offset="100%" stop-color="#2D1B69"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="absolute inset-0 bg-accent/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <span class="font-headline text-xl font-bold gradient-text hidden sm:block">ADAM MASKHOUNI</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="homepage.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Command Center</a>
+                    <a href="about.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-accent border-b-2 border-accent transition-all duration-300">Origin Story</a>
+                    <a href="skills.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Arsenal</a>
+                    <a href="projects.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Digital Creations</a>
+                    <a href="blog.html" class="px-4 py-2 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Intelligence Network</a>
+                    <a href="contact.html" class="btn-primary ml-4">Secure Channel</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-accent/10 transition-all duration-300">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2 mx-4">
+            <div class="glass-card-elevated p-4 space-y-2">
+                <a href="homepage.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Command Center</a>
+                <a href="about.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-accent bg-accent/10 border-l-4 border-accent">Origin Story</a>
+                <a href="skills.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Arsenal</a>
+                <a href="projects.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Digital Creations</a>
+                <a href="blog.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-text-secondary hover:text-accent hover:bg-accent/10 transition-all duration-300">Intelligence Network</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-lg font-cta font-semibold text-center bg-accent text-primary hover:bg-accent-light transition-all duration-300">Secure Channel</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 cyber-grid">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-background z-0"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center space-x-2 glass-card px-4 py-2 mb-8 animate-slideDown">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+                <span class="font-code text-sm text-accent">CHAPTER I: THE GENESIS</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-headline font-black text-5xl md:text-7xl lg:text-8xl mb-6 animate-slideUp">
+                <span class="block text-text-primary">THE ORIGIN</span>
+                <span class="block gradient-text mt-2">STORY</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <div class="mb-8 animate-slideUp" style="animation-delay: 0.2s;">
+                <p class="font-body text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto">
+                    From curious teenager to digital prodigy—a journey through code, security, and boundless imagination
+                </p>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Beginning Section -->
+    <section id="beginning" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary/30 to-background"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
+                <!-- Image -->
+                <div class="relative">
+                    <div class="glass-card overflow-hidden rounded-2xl">
+                        <img src="https://images.unsplash.com/photo-1710770563074-6d9cc0d3e338" alt="Young developer working on laptop in dimly lit room with code on screen representing Adam's early coding journey" class="w-full h-96 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 glass-card px-6 py-4">
+                        <div class="text-4xl font-headline font-bold gradient-text">2018</div>
+                        <div class="text-sm text-text-secondary font-cta">The Spark</div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6">
+                        <span class="gradient-text">THE BEGINNING</span>
+                    </h2>
+                    <div class="space-y-4 text-text-secondary">
+                        <p class="text-lg leading-relaxed">
+                            At age 8, while most kids were playing video games, I was wondering <span class="text-accent font-semibold">how they were made</span>. That curiosity led me down a rabbit hole that would define my entire existence.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            My first line of code was a simple "Hello World" in Python. It felt like <span class="text-success font-semibold">magic</span>—the ability to command a machine with words. That moment ignited an obsession that has never faded.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            I spent countless nights exploring programming tutorials, breaking things, fixing them, and breaking them again. Each error message was a puzzle, each successful compile a victory.
+                        </p>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-4">
+                        <div class="glass-card px-4 py-2">
+                            <span class="font-code text-accent text-sm">Age: 8</span>
+                        </div>
+                        <div class="glass-card px-4 py-2">
+                            <span class="font-code text-success text-sm">First Language: Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline Section -->
+    <section id="timeline" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary to-background"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">THE JOURNEY</span>
+                </h2>
+                <p class="font-body text-lg text-text-secondary max-w-2xl mx-auto">
+                    Seven years of relentless learning, building, and pushing boundaries
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-accent via-secondary to-accent opacity-30 hidden md:block"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- 2018 -->
+                    <div class="relative scroll-reveal">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:text-right mb-4 md:mb-0">
+                                <div class="glass-card p-6 hover-lift">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2018</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">The Awakening</h3>
+                                    <p class="text-text-secondary">Discovered programming through Python. Built first calculator app. Realized technology could be created, not just consumed.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background hidden md:block"></div>
+                    </div>
+
+                    <!-- 2019 -->
+                    <div class="relative scroll-reveal" style="animation-delay: 0.1s;">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="hidden md:block"></div>
+                            <div class="mb-4 md:mb-0">
+                                <div class="glass-card p-6 hover-lift">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2019</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">Web Development Era</h3>
+                                    <p class="text-text-secondary">Mastered HTML, CSS, JavaScript. Created first portfolio website. Discovered the power of the web platform.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-background hidden md:block"></div>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div class="relative scroll-reveal" style="animation-delay: 0.2s;">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:text-right mb-4 md:mb-0">
+                                <div class="glass-card p-6 hover-lift">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2020</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">Security Awakening</h3>
+                                    <p class="text-text-secondary">Introduced to ethical hacking. Completed first cybersecurity course. Realized the importance of building secure systems.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background hidden md:block"></div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="relative scroll-reveal" style="animation-delay: 0.3s;">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="hidden md:block"></div>
+                            <div class="mb-4 md:mb-0">
+                                <div class="glass-card p-6 hover-lift">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2021</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">Game Development Journey</h3>
+                                    <p class="text-text-secondary">Started learning Unity and C#. Built first 2D platformer game. Combined creativity with technical skills.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-background hidden md:block"></div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="relative scroll-reveal" style="animation-delay: 0.4s;">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:text-right mb-4 md:mb-0">
+                                <div class="glass-card p-6 hover-lift">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2022</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">Full Stack Mastery</h3>
+                                    <p class="text-text-secondary">Learned React, Node.js, databases. Built complete web applications. Understood the entire development lifecycle.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background hidden md:block"></div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="relative scroll-reveal" style="animation-delay: 0.5s;">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="hidden md:block"></div>
+                            <div class="mb-4 md:mb-0">
+                                <div class="glass-card p-6 hover-lift">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2023</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">AI & Automation</h3>
+                                    <p class="text-text-secondary">Explored machine learning and AI. Built automation tools. Earned multiple cybersecurity certifications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-background hidden md:block"></div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="relative scroll-reveal" style="animation-delay: 0.6s;">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:text-right mb-4 md:mb-0">
+                                <div class="glass-card p-6 hover-lift">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2024</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">Professional Projects</h3>
+                                    <p class="text-text-secondary">Launched CyberGuard Pro. Developed Neon Nexus game. Built DevSecOps pipeline. Established professional portfolio.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background hidden md:block"></div>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="relative scroll-reveal" style="animation-delay: 0.7s;">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="hidden md:block"></div>
+                            <div class="mb-4 md:mb-0">
+                                <div class="glass-card-elevated p-6 hover-lift border-2 border-accent">
+                                    <div class="text-3xl font-headline font-bold gradient-text mb-2">2025</div>
+                                    <h3 class="text-xl font-cta font-bold text-text-primary mb-3">The Present & Beyond</h3>
+                                    <p class="text-text-secondary">Continuing to innovate, learn, and build. Seeking collaboration opportunities. Ready to shape the future of technology.</p>
+                                    <div class="mt-4 flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                                        <span class="text-success font-code text-sm">CURRENTLY ACTIVE</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-success rounded-full border-4 border-background animate-pulse hidden md:block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary/30 to-background"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">CORE PHILOSOPHY</span>
+                </h2>
+                <p class="font-body text-lg text-text-secondary max-w-2xl mx-auto">
+                    The principles that guide every line of code and every decision
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Disciplined Rebellion -->
+                <div class="glass-card p-8 hover-lift scroll-reveal">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-cta font-bold text-text-primary mb-4 text-center">Disciplined Rebellion</h3>
+                    <p class="text-text-secondary text-center leading-relaxed">
+                        Using cutting-edge skills to <span class="text-accent font-semibold">build rather than break</span>. Challenging conventions while maintaining ethical standards. Innovation within responsibility.
+                    </p>
+                </div>
+
+                <!-- Security First -->
+                <div class="glass-card p-8 hover-lift scroll-reveal" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-cta font-bold text-text-primary mb-4 text-center">Security First</h3>
+                    <p class="text-text-secondary text-center leading-relaxed">
+                        Every system designed with <span class="text-success font-semibold">security at its core</span>. Understanding vulnerabilities to build impenetrable defenses. Protection through knowledge.
+                    </p>
+                </div>
+
+                <!-- Continuous Evolution -->
+                <div class="glass-card p-8 hover-lift scroll-reveal" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-cta font-bold text-text-primary mb-4 text-center">Continuous Evolution</h3>
+                    <p class="text-text-secondary text-center leading-relaxed">
+                        Never settling, always learning. <span class="text-warning font-semibold">Adapting to new technologies</span> while mastering fundamentals. Growth as a constant state.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Manifesto Section -->
+    <section id="manifesto" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary to-background"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated p-12 scroll-reveal">
+                <div class="text-center mb-12">
+                    <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                        <span class="gradient-text">THE MANIFESTO</span>
+                    </h2>
+                    <p class="font-body text-lg text-text-secondary">
+                        A declaration of purpose and vision for the digital future
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Manifesto Point 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                            <span class="text-primary font-headline font-bold">I</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-cta font-bold text-text-primary mb-2">Age Is Just A Number</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                In the digital realm, capability transcends age. A 15-year-old with passion and dedication can architect systems that rival industry veterans. The code doesn't care about your birth year—it cares about your logic, creativity, and determination.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Manifesto Point 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                            <span class="text-primary font-headline font-bold">II</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-cta font-bold text-text-primary mb-2">Security Meets Creativity</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                The intersection of cybersecurity and game development isn't a contradiction—it's a superpower. Building immersive worlds requires the same systematic thinking as securing digital infrastructure. Both demand understanding complex systems and anticipating user behavior.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Manifesto Point 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                            <span class="text-primary font-headline font-bold">III</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-cta font-bold text-text-primary mb-2">Build Tomorrow's Infrastructure Today</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                Every project is an opportunity to shape the future. Whether it's a security tool that protects thousands or a game that inspires millions, the work we do today becomes the foundation for tomorrow's innovations. Think big, start now.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Manifesto Point 4 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                            <span class="text-primary font-headline font-bold">IV</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-cta font-bold text-text-primary mb-2">Ethical Innovation</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                Power without responsibility is dangerous. Every skill learned, every tool built, every system designed must serve a greater purpose. Use knowledge to protect, create, and empower—never to harm or exploit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Manifesto Point 5 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                            <span class="text-primary font-headline font-bold">V</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-cta font-bold text-text-primary mb-2">Community Over Competition</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                The best developers share knowledge, collaborate on solutions, and lift others up. Open-source contributions, mentorship, and knowledge sharing aren't distractions—they're essential to collective progress. We rise by lifting others.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Manifesto CTA -->
+                <div class="mt-12 text-center">
+                    <a href="javascript:void(0)" class="btn-primary inline-flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Download Full Manifesto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Achievements Section -->
+    <section id="achievements" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary/30 to-background"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">BY THE NUMBERS</span>
+                </h2>
+                <p class="font-body text-lg text-text-secondary max-w-2xl mx-auto">
+                    Quantifying the journey through metrics and milestones
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <!-- Stat 1 -->
+                <div class="glass-card p-6 text-center hover-lift scroll-reveal">
+                    <div class="text-4xl md:text-5xl font-headline font-bold gradient-text mb-2">7</div>
+                    <div class="text-sm text-text-secondary font-cta">Years Coding</div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="glass-card p-6 text-center hover-lift scroll-reveal" style="animation-delay: 0.1s;">
+                    <div class="text-4xl md:text-5xl font-headline font-bold gradient-text mb-2">50+</div>
+                    <div class="text-sm text-text-secondary font-cta">Projects Built</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="glass-card p-6 text-center hover-lift scroll-reveal" style="animation-delay: 0.2s;">
+                    <div class="text-4xl md:text-5xl font-headline font-bold gradient-text mb-2">15+</div>
+                    <div class="text-sm text-text-secondary font-cta">Technologies</div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="glass-card p-6 text-center hover-lift scroll-reveal" style="animation-delay: 0.3s;">
+                    <div class="text-4xl md:text-5xl font-headline font-bold gradient-text mb-2">5+</div>
+                    <div class="text-sm text-text-secondary font-cta">Certifications</div>
+                </div>
+            </div>
+
+            <!-- Achievement Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Achievement 1 -->
+                <div class="glass-card p-6 hover-lift scroll-reveal">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-cta text-lg font-bold text-text-primary">Security Certified</h3>
+                            <p class="text-sm text-text-secondary">Multiple certifications</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary text-sm">
+                        Earned professional certifications in ethical hacking, penetration testing, and cybersecurity fundamentals from recognized institutions.
+                    </p>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="glass-card p-6 hover-lift scroll-reveal" style="animation-delay: 0.1s;">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-success/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-cta text-lg font-bold text-text-primary">Open Source</h3>
+                            <p class="text-sm text-text-secondary">Community contributor</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary text-sm">
+                        Active contributor to open-source projects, sharing tools and knowledge with the global developer community.
+                    </p>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="glass-card p-6 hover-lift scroll-reveal" style="animation-delay: 0.2s;">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-warning/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-cta text-lg font-bold text-text-primary">Game Published</h3>
+                            <p class="text-sm text-text-secondary">Live projects</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary text-sm">
+                        Successfully developed and launched multiple game projects, combining technical expertise with creative vision.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="relative py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-background via-primary to-background"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated p-12 text-center scroll-reveal">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6">
+                    <span class="gradient-text">LET'S BUILD THE FUTURE</span>
+                </h2>
+                <p class="font-body text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+                    Whether you're looking for a collaborator, a developer, or someone who thinks differently—let's connect and create something extraordinary.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="projects.html" class="btn-secondary w-full sm:w-auto">
+                        <span class="flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                            <span>View My Work</span>
+                        </span>
+                    </a>
+                    <a href="contact.html" class="btn-primary w-full sm:w-auto">
+                        <span class="flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                            <span>Start Conversation</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L37 12V28L20 38L3 28V12L20 2Z" stroke="url(#footer-logo-gradient)" stroke-width="2" fill="none"/>
+                            <text x="20" y="26" font-family="Orbitron" font-weight="900" font-size="16" fill="#00D4FF" text-anchor="middle">AM</text>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="3" y1="2" x2="37" y2="38">
+                                    <stop offset="0%" stop-color="#00D4FF"/>
+                                    <stop offset="100%" stop-color="#2D1B69"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-headline text-xl font-bold gradient-text">ADAM MASKHOUNI</span>
+                    </div>
+                    <p class="text-text-secondary text-sm mb-4 max-w-md">
+                        Building tomorrow's digital infrastructure today. Where security meets creativity in the realm of code.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 rounded-lg bg-surface hover:bg-accent/20 flex items-center justify-center transition-all duration-300 group">
+                            <svg class="w-5 h-5 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-cta text-lg font-bold text-text-primary mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Command Center</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Origin Story</a></li>
+                        <li><a href="skills.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Arsenal</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Digital Creations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-cta text-lg font-bold text-text-primary mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Intelligence Network</a></li>
+                        <li><a href="contact.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Secure Channel</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">GitHub</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-border text-center">
+                <p class="text-text-secondary text-sm">
+                    © 2025 Adam Maskhouni. All Rights Reserved. | Built with <span class="text-accent">♥</span> and <span class="terminal-text">code</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('backdrop-blur-xl', 'bg-primary/80');
+            } else {
+                nav.classList.remove('backdrop-blur-xl', 'bg-primary/80');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Particle System
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 100;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5 + 0.2;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+
+            draw() {
+                ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
